@@ -68,6 +68,7 @@ public class Contenido extends JPanel {
 
         //Agreagar el menú al JPanel
         barraMenu.add(elMenuBar);
+        
         //Posicionar el JPanel de la barra de menú en el JPanel Contenido
         add(barraMenu, BorderLayout.NORTH);
 
@@ -92,8 +93,6 @@ public class Contenido extends JPanel {
         elMenuBar.add(opInformacion);
         elMenuBar.add(opCerrar);
 
-        //Agregar la barra de menú al panel
-        add(elMenuBar);
 
         //Desactivo guardar y guardar como para que solo estén activadas cuando 
         //haya un archivo abierto y se den otras opciones
@@ -134,7 +133,7 @@ public class Contenido extends JPanel {
                     guardarFichero();
                 } else if (elTextoCentral.isVisible() && !obtenerTituloVentana().equals(tituloNoGuardado)) {
                     try {
-                        GestionFichero.guardar_Fichero(filename, elTextoCentral.getText());
+                        GestionFichero.guardar_Fichero(obtenerTituloVentana(), elTextoCentral.getText());
                         //Desactivo el botón guardar  pues se acaba de guardar
                         desactivarGuardar();
                     } catch (IOException ex) {

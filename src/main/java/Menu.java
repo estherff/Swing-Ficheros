@@ -43,7 +43,7 @@ public class Menu extends JPanel{
         //Agrego las opciones que colgarán del menú Archivo
         JMenuItem opArchivoCrear = new JMenuItem("Nuevo");
         JMenuItem opArchivoGuradar = new JMenuItem("Guardar");
-        JMenuItem opArchivoGuradarComo = new JMenuItem("Guardar comom");
+        JMenuItem opArchivoGuradarComo = new JMenuItem("Guardar como");
         opArchivo.add(opArchivoCrear);
         opArchivo.add(opArchivoGuradar);
         opArchivo.add(opArchivoGuradarComo);
