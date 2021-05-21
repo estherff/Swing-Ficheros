@@ -167,10 +167,7 @@ public class Contenido extends JPanel {
 
         opArchivoGuardarComo.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                //https://docs.oracle.com/javase/7/docs/api/javax/swing/JFileChooser.html   
-                fileChooser = new JFileChooser();
-              
+            public void actionPerformed(ActionEvent e) {             
                     //Se muestra la ventana de elegir ruta y dar nombre de fichero para guardar
                     guardarFichero();
             }
