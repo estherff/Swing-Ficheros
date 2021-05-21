@@ -5,8 +5,7 @@
  */
 package gal.teis.swing.leerfichero;
 
-import java.awt.Color;
-import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
 
 
 /**

@@ -22,10 +22,9 @@ import gal.teis.ficheros.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
+
 
 /**
  *
@@ -171,21 +170,9 @@ public class Contenido extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 //https://docs.oracle.com/javase/7/docs/api/javax/swing/JFileChooser.html   
                 fileChooser = new JFileChooser();
-                if (elTextoCentral.isVisible() && obtenerTituloVentana().equals(tituloNoGuardado)) {
+              
                     //Se muestra la ventana de elegir ruta y dar nombre de fichero para guardar
                     guardarFichero();
-                } else if (elTextoCentral.isVisible() && !obtenerTituloVentana().equals(tituloNoGuardado)) {
-                    try {
-                        GestionFichero.guardar_Fichero(filename, elTextoCentral.getText());
-                        //Desactivo el botón guardar  pues se acaba de guardar
-                        desactivarGuardar();
-
-                    } catch (IOException ex) {
-                        //Muestra un mensaje de error si no se puede almacenar elfichero
-                        //Se puede probar sobre una carpeta de solo lectura o una unidad de DVD que no tenga dispositivo
-                        JOptionPane.showMessageDialog(fileChooser, ex.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
-                    }
-                }
             }
         }
         );
